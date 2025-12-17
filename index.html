@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="aliTech - Criação de sites profissionais e otimizados para empresas que buscam resultados.">
+    <meta name="description" content="aliTech - Criação de sites profissionais em Inácio Martins, PR.">
     <title>aliTech | Criação de Sites Profissionais</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,48 +17,24 @@
         :root {
             --primary-color: #2563eb; /* Azul Vibrante */
             --primary-dark: #1e40af;
-            --secondary-color: #0f172a; /* Azul Quase Preto (Fundo Escuro) */
+            --secondary-color: #0f172a; /* Azul Quase Preto */
             --text-color: #334155;
-            --text-light: #f8fafc;
-            --bg-light: #f1f5f9;
             --white: #ffffff;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --bg-light: #f1f5f9;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-color); line-height: 1.6; background-color: var(--white); }
+        
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary-color); }
         ul { list-style: none; }
         a { text-decoration: none; color: inherit; }
         img { max-width: 100%; display: block; }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
         .btn {
             display: inline-block;
@@ -72,22 +48,14 @@
             cursor: pointer;
             font-family: 'Poppins', sans-serif;
         }
-
-        .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
+        .btn:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
+        
         .btn-outline {
             background-color: transparent;
             border: 2px solid var(--primary-color);
             color: var(--primary-color);
         }
-
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
+        .btn-outline:hover { background-color: var(--primary-color); color: var(--white); }
 
         /* --- HEADER --- */
         header {
@@ -99,275 +67,83 @@
             z-index: 1000;
             padding: 15px 0;
         }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
-
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); }
         .logo span { color: var(--primary-color); }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
+        
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
         .nav-links a:hover { color: var(--primary-color); }
-
         .hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             padding: 160px 0 100px;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            position: relative;
-            overflow: hidden;
         }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
+        .hero-content { display: flex; align-items: center; gap: 50px; }
         .hero-text { flex: 1; }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            color: #64748b;
-        }
-
+        .hero-text h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero-text p { font-size: 1.1rem; margin-bottom: 30px; color: #64748b; }
         .hero-img { flex: 1; }
         .hero-img img { border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
 
-        /* --- SOBRE --- */
+        /* --- SECTIONS --- */
         .section-padding { padding: 100px 0; }
         
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-
+        /* Sobre */
+        .about-content { display: flex; align-items: center; gap: 60px; }
         .about-img { flex: 1; }
         .about-img img { border-radius: 12px; height: 400px; object-fit: cover; width: 100%; }
-
         .about-text { flex: 1; }
-        .subtitle {
-            color: var(--primary-color);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
+        .subtitle { color: var(--primary-color); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 10px; display: block; }
         .about-text h2 { font-size: 2.2rem; margin-bottom: 20px; }
-        .about-text p { margin-bottom: 15px; }
 
-        /* --- SERVIÇOS --- */
+        /* Serviços */
         .services { background-color: var(--bg-light); }
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
         .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: var(--white); padding: 40px; border-radius: 12px; transition: var(--transition); border-bottom: 3px solid transparent; }
+        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow); border-bottom: 3px solid var(--primary-color); }
+        .service-icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+        /* Diferenciais */
+        .diferenciais-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .diff-item i { background: rgba(37, 99, 235, 0.1); color: var(--primary-color); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 15px; font-size: 1.2rem; }
 
-        .service-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-            transition: var(--transition);
-            border-bottom: 3px solid transparent;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow);
-            border-bottom: 3px solid var(--primary-color);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 { font-size: 1.4rem; margin-bottom: 15px; }
-
-        /* --- DIFERENCIAIS --- */
-        .diferenciais-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .diff-item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .diff-item i {
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary-color);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        /* --- PORTFÓLIO --- */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-item {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            group;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .portfolio-item:hover img { transform: scale(1.05); }
-
-        .portfolio-info {
-            background: var(--white);
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .portfolio-info h3 { font-size: 1.2rem; }
-        .portfolio-info span { color: #64748b; font-size: 0.9rem; }
-
-        /* --- CTA --- */
-        .cta-section {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 80px 0;
-        }
-
+        /* CTA */
+        .cta-section { background-color: var(--secondary-color); color: var(--white); text-align: center; padding: 80px 0; }
         .cta-section h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 20px; }
-        .cta-section p { margin-bottom: 30px; opacity: 0.9; }
 
-        /* --- CONTATO --- */
-        .contact-container {
-            display: flex;
-            gap: 50px;
-        }
-
+        /* Contato */
+        .contact-container { display: flex; gap: 50px; }
         .contact-info { flex: 1; }
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+        .info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
         .info-item i { font-size: 1.2rem; color: var(--primary-color); }
-
-        .contact-form {
-            flex: 1.5;
-            background: var(--bg-light);
-            padding: 40px;
-            border-radius: 12px;
-        }
-
+        
+        .contact-form { flex: 1.5; background: var(--bg-light); padding: 40px; border-radius: 12px; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-family: inherit;
-        }
-
+        .form-control { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
         .form-control:focus { outline: 2px solid var(--primary-color); border-color: transparent; }
         textarea.form-control { resize: vertical; height: 120px; }
 
-        /* --- FOOTER --- */
-        footer {
-            background-color: #020617;
-            color: #94a3b8;
-            padding: 60px 0 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #1e293b;
-        }
-
+        /* Footer */
+        footer { background-color: #020617; color: #94a3b8; padding: 60px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #1e293b; padding-bottom: 40px; }
         .footer-col h4 { color: var(--white); margin-bottom: 20px; }
         .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a:hover { color: var(--white); }
-
         .copyright { text-align: center; font-size: 0.9rem; }
 
-        /* --- RESPONSIVO --- */
+        /* Responsivo */
         @media (max-width: 992px) {
             .hero-content, .about-content { flex-direction: column; text-align: center; }
             .hero-img, .about-img { order: -1; }
             .hero-text h1 { font-size: 2.5rem; }
         }
-
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                background: var(--white);
-                width: 100%;
-                flex-direction: column;
-                padding: 30px;
-                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-                transition: 0.3s;
-            }
-            
+            .nav-links { position: fixed; top: 70px; right: -100%; background: var(--white); width: 100%; flex-direction: column; padding: 30px; box-shadow: 0 10px 10px rgba(0,0,0,0.1); transition: 0.3s; }
             .nav-links.active { right: 0; }
             .hamburger { display: block; }
             .contact-container { flex-direction: column; }
@@ -379,15 +155,12 @@
     <header>
         <div class="container nav-container">
             <a href="#" class="logo">ali<span>Tech</span></a>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
             <nav>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#diferenciais">Diferenciais</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#contato" class="btn">Solicitar Orçamento</a></li>
                 </ul>
             </nav>
@@ -398,11 +171,10 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h1>Criação de Sites Profissionais que Geram Resultados</h1>
-                <p>A aliTech desenvolve sites modernos, rápidos e otimizados para empresas que querem vender mais e se destacar no mercado.</p>
+                <p>A aliTech desenvolve sites modernos, rápidos e otimizados para empresas de Inácio Martins e região que querem vender mais.</p>
                 <a href="#contato" class="btn">Quero meu site profissional</a>
             </div>
             <div class="hero-img">
-                
                 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop" alt="Desenvolvimento Web Profissional">
             </div>
         </div>
@@ -411,14 +183,13 @@
     <section class="section-padding" id="sobre">
         <div class="container about-content">
             <div class="about-img">
-                
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop" alt="Equipe aliTech trabalhando">
             </div>
             <div class="about-text">
                 <span class="subtitle">Sobre a aliTech</span>
                 <h2>Transformamos Ideias em Negócios Digitais</h2>
-                <p>A aliTech nasceu com um propósito claro: ajudar empresas a se posicionarem com autoridade na internet. Não criamos apenas "sites bonitos", criamos ferramentas de venda.</p>
-                <p>Nosso foco é entender o seu modelo de negócio e entregar uma solução personalizada, rápida e segura. Combinamos design estratégico com tecnologia de ponta para garantir que seu site trabalhe por você 24 horas por dia.</p>
+                <p>A aliTech é uma empresa de Inácio Martins - PR com um propósito claro: ajudar empresas a se posicionarem com autoridade na internet.</p>
+                <p>Nosso foco é entregar soluções personalizadas, rápidas e seguras. Combinamos design estratégico com tecnologia de ponta para garantir que seu site trabalhe por você 24 horas por dia.</p>
                 <a href="#servicos" class="btn btn-outline">Conheça nossos serviços</a>
             </div>
         </div>
@@ -428,38 +199,38 @@
         <div class="container">
             <div class="section-header">
                 <span class="subtitle">O que fazemos</span>
-                <h2>Soluções Completas para sua Empresa</h2>
+                <h2>Soluções Completas</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-desktop"></i></div>
                     <h3>Sites Institucionais</h3>
-                    <p>Apresente sua empresa com credibilidade. Sites planejados para fortalecer sua marca e comunicar seus valores.</p>
+                    <p>Apresente sua empresa com credibilidade. Sites planejados para fortalecer sua marca.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-rocket"></i></div>
                     <h3>Landing Pages</h3>
-                    <p>Páginas de alta conversão focadas em campanhas de vendas, captura de leads e promoções específicas.</p>
+                    <p>Páginas de alta conversão focadas em vendas e promoções específicas.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-store"></i></div>
                     <h3>Lojas Virtuais</h3>
-                    <p>E-commerces seguros e fáceis de gerenciar para você vender seus produtos para todo o Brasil.</p>
+                    <p>E-commerces seguros para você vender seus produtos online.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Sites Responsivos</h3>
-                    <p>Layouts que se adaptam perfeitamente a celulares, tablets e computadores, garantindo a melhor experiência.</p>
+                    <p>Layouts que funcionam em celulares, tablets e computadores.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-search"></i></div>
                     <h3>Otimização SEO</h3>
-                    <p>Estrutura otimizada para que seu site seja encontrado mais facilmente no Google pelos seus clientes.</p>
+                    <p>Estrutura otimizada para ser encontrado no Google.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Manutenção e Suporte</h3>
-                    <p>Não te deixamos na mão. Oferecemos suporte técnico contínuo e atualizações para seu site.</p>
+                    <h3>Manutenção</h3>
+                    <p>Suporte técnico contínuo e atualizações para seu site.</p>
                 </div>
             </div>
         </div>
@@ -474,65 +245,22 @@
                 <div class="diff-item">
                     <i class="fas fa-paint-brush"></i>
                     <h4>Design Moderno</h4>
-                    <p>Visual alinhado às tendências globais de UI/UX.</p>
+                    <p>Visual alinhado às tendências.</p>
                 </div>
                 <div class="diff-item">
                     <i class="fas fa-bolt"></i>
                     <h4>Velocidade</h4>
-                    <p>Sites otimizados para carregar em instantes.</p>
+                    <p>Sites otimizados para carregar rápido.</p>
                 </div>
                 <div class="diff-item">
                     <i class="fas fa-code"></i>
                     <h4>Código Limpo</h4>
-                    <p>Desenvolvimento escalável e sem "gambiarras".</p>
+                    <p>Desenvolvimento profissional.</p>
                 </div>
                 <div class="diff-item">
                     <i class="fas fa-headset"></i>
-                    <h4>Suporte Especializado</h4>
-                    <p>Atendimento humanizado e próximo do cliente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding services" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <span class="subtitle">Nosso Trabalho</span>
-                <h2>Projetos Recentes</h2>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop" alt="Site Advocacia">
-                    <div class="portfolio-info">
-                        <h3>Advocacia Silva & Associados</h3>
-                        <span>Site Institucional</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" alt="Dashboard Financeiro">
-                    <div class="portfolio-info">
-                        <h3>FinTech Solutions</h3>
-                        <span>Landing Page SaaS</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop" alt="Loja Moda">
-                    <div class="portfolio-info">
-                        <h3>Urban Style Moda</h3>
-                        <span>E-commerce</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    
-                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1355&auto=format&fit=crop" alt="Cafeteria">
-                    <div class="portfolio-info">
-                        <h3>Aroma Café</h3>
-                        <span>Site One Page</span>
-                    </div>
+                    <h4>Suporte Local</h4>
+                    <p>Atendimento próximo, direto do Paraná.</p>
                 </div>
             </div>
         </div>
@@ -541,8 +269,8 @@
     <section class="cta-section">
         <div class="container">
             <h2>Pronto para ter um site profissional?</h2>
-            <p>Não perca mais vendas por ter um site lento ou desatualizado. Vamos conversar?</p>
-            <a href="#contato" class="btn" style="background-color: var(--white); color: var(--primary-color);">Solicitar Orçamento Agora</a>
+            <p>Não perca mais vendas. Vamos conversar?</p>
+            <a href="#contato" class="btn" style="background-color: var(--white); color: var(--primary-color);">Solicitar Orçamento</a>
         </div>
     </section>
 
@@ -550,7 +278,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Fale Conosco</h2>
-                <p>Preencha o formulário abaixo ou entre em contato direto.</p>
+                <p>Estamos em Inácio Martins, prontos para atender você.</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
@@ -558,43 +286,46 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>E-mail</h4>
-                            <p>contato@alitech.com.br</p>
+                            <p><a href="mailto:alitech.sites.im@gmail.com">alitech.sites.im@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fab fa-whatsapp"></i>
                         <div>
                             <h4>WhatsApp</h4>
-                            <p>(11) 99999-9999</p>
+                            <p><a href="https://wa.me/554298633284" target="_blank">+55 (42) 9863-3284</a></p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Localização</h4>
-                            <p>São Paulo, SP - Brasil</p>
+                            <p>Inácio Martins - PR</p>
                         </div>
                     </div>
                 </div>
                 
-                <form class="contact-form">
+                <form action="https://formsubmit.co/alitech.sites.im@gmail.com" method="POST" class="contact-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
                     <div class="form-group">
                         <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" class="form-control" placeholder="Seu nome" required>
+                        <input type="text" id="nome" name="name" class="form-control" placeholder="Seu nome" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="seu@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="whatsapp">WhatsApp</label>
-                        <input type="tel" id="whatsapp" class="form-control" placeholder="(DD) 00000-0000">
+                        <label for="whatsapp">Telefone / WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="phone" class="form-control" placeholder="(42) 99999-9999" required>
                     </div>
                     <div class="form-group">
                         <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" class="form-control" placeholder="Conte um pouco sobre seu projeto..."></textarea>
+                        <textarea id="mensagem" name="message" class="form-control" placeholder="Descreva seu projeto..." required></textarea>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%;">Enviar Solicitação</button>
+                    <button type="submit" class="btn" style="width: 100%;">Enviar Pedido</button>
                 </form>
             </div>
         </div>
@@ -605,23 +336,22 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="#" class="logo" style="color:white; margin-bottom:15px; display:block;">ali<span>Tech</span></a>
-                    <p style="font-size: 0.9rem;">Desenvolvemos soluções digitais que conectam sua empresa ao futuro. Foco em performance e conversão.</p>
+                    <p style="font-size: 0.9rem;">Desenvolvimento de sites profissionais em Inácio Martins e região.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> (42) 9863-3284</li>
+                        <li><i class="far fa-envelope"></i> alitech.sites.im@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Inácio Martins, PR</li>
+                    </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Links Rápidos</h4>
                     <ul>
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#">Sites Institucionais</a></li>
-                        <li><a href="#">Lojas Virtuais</a></li>
-                        <li><a href="#">Landing Pages</a></li>
+                        <li><a href="#contato">Solicitar Orçamento</a></li>
                     </ul>
                 </div>
             </div>
@@ -641,7 +371,6 @@
             hamburger.classList.toggle('toggle');
         });
 
-        // Fechar menu ao clicar em um link
         links.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -649,4 +378,4 @@
         });
     </script>
 </body>
-  </html>
+</html>
